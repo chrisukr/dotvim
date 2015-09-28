@@ -47,3 +47,17 @@ imap <right> <nop>
 
 " Quick escape mode
 imap jk <Esc>
+
+" CtrlP config
+" Make ctrlp fast if possible
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
